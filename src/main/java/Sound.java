@@ -49,6 +49,7 @@ public class Sound
         break;
       }
     }
+    int [] newSamples = new int[count];
       for(int j = count; j > 0; j--){
         samples.remove(j);
       }
