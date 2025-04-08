@@ -40,7 +40,7 @@ public class Tester {
       int result = temp.limitAmplitude(0);
       //answer [40, 2000, 17, -2000, -17, -2000, 2000]
       String failMsg = "Failed - Input=" + temp.samples + ", Expected 7, Output = " + result;
-      assertEquals( 7, result, failMsg);
+      assertEquals(7, result, failMsg);
    }
 
    @Test
@@ -51,7 +51,7 @@ public class Tester {
       int result = temp.limitAmplitude(1);
       //answer [40, 2000, 17, -2000, -17, -2000, 2000]
       String failMsg = "Failed - Input=" + temp.samples + ", Expected 0, Output = " + result;
-      assertEquals( 0, result, failMsg);
+      assertEquals(0, result, failMsg);
       //Failed - Input {} limitAmplitude(1) Expected Output 0
    }
 
