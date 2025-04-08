@@ -64,6 +64,7 @@ public class Tester {
       for (int i = 0; i < answer.length; i++){
          String failMsg = "Test failed. Expected " + answer[i] + " at sample index " + i + ", but found " + temp.samples[i];
          assertEquals(temp.samples[i], answer[i], failMsg);
+
       }
    }
 

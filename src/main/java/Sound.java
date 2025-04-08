@@ -14,18 +14,20 @@ public class Sound
    *  @return the number of values in this sound that this method changed
    */
   public int limitAmplitude(int limit)
-  {
-    int n = 0;
-    for(int i = 0; i < samples.length; i++) {
-      if(samples[i] > limit) {
+  {  
+    /* to be implemented in part (a) */
+    int count = 0;
+    for(int i = 0; i < samples.length; i++){
+      if(samples[i]>limit){
         samples[i] = limit;
-        n++;
-      } else if(samples[i] < -limit) {
+        count++;
+      }
+      else if(samples[i]<(-limit)){
         samples[i] = -limit;
-        n++;
+        count++;
       }
     }
-    return n;
+    return count;
   }
 
 
@@ -37,16 +39,19 @@ public class Sound
    */
   public void trimSilenceFromBeginning()
   {
-    int n = 0;
-    while(samples[n] == 0) {
-      n++;
+    /* to be implemented in part (b) */
+    int count = 0;
+    for(int i = 0; i < samples.length; i++){
+      if(samples[i] == 0){
+        count++;
+      }
+      else{
+        break;
+      }
     }
-    int[] result = new int[samples.length-n];
-    int j = 0;
-    for(int i = n-1; i < samples.length; i++) {
-      result[j] = samples[i];
-      j++;
-    }
-    samples = result;
+    int [] newSamples = new int[count];
+      for(int j = count; j > 0; j--){
+        samples.remove(j);
+      }
   }
 }
