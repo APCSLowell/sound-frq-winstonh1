@@ -41,12 +41,12 @@ public class Sound
   {
     /* to be implemented in part (b) */
     int count = 0;
-    while(samples[i] == 0){
+    while(samples[count] == 0){
       count++;
     }
-    int [] newSamples = new int[samples.length()-count];
-    for(int i = 0; i < newSample.length(); i++){
-      newSamples[i] = samples[i+count];
+    int [] newSample = new int[samples.length-count];
+    for(int i = 0; i < newSample.length; i++){
+      newSample[i] = samples[i+count];
     }
     samples = newSample;
   }
